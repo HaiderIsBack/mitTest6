@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- style css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Malaysian Institute Of Technology</title>
+</head>
+<script src="https://unpkg.com/scrollreveal"></script>
+<body>
+    <!-- Side Bar -->
+    <div class="sidebar" id="sideBar">
+        <div class="close-btn" onclick="sideBar()">
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="pl-0">
+            <li>
+                <a href="/"><i class="fa fa-home"></i> Home</a>
+            </li>
+            <li>
+                <a href="/about"><i class="fa fa-comments"></i> About</a>
+            </li>
+        </ul>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background: linear-gradient(-45deg,#396afc,#2948ff);">
+        <div class="container">
+            <a href="/" class="navbar-brand"><img src="/Images/logo.png" style="width: 50px;" alt=""> <h3 class="d-none d-md-inline align-middle ">Malaysian Institute Of Technology</h3><h3 class="d-inline d-md-none align-middle">MIT</h3></a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item d-none d-md-block">
+                    <a href="/" class="nav-link first-link"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item d-none d-md-block">
+                    <a href="#" class="nav-link last-link"><i class="fa fa-comments"></i> About</a>
+                </li>
+                <li class="nav-item d-block d-md-none">
+                    <i class="fa fa-bars fa-2x text-light" onclick="sideBar()"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Form -->
+    <div class="container mt-5">
+        <h1 class="text-center">Login</h1>
+        <% if(message.length > 0){ %>
+        <div class="alert" style="color: #fff;background: crimson;" role="alert">
+            <strong>Error </strong>
+            <%= message%>
+        </div>
+        <% } %>
+        <form action="/login_check" method="post">
+            <label for="roll">Roll Number</label>
+            <input type="number" class="form-control" name="roll" required>
+            <label for="roll">Password</label>
+            <input type="password" class="form-control" name="pwd" required>
+            <p class="text-muted">Don't Have Any Account? <a href="/signup">Create One</a> </p>
+            <button class="btn text-light mt-2" style="background: linear-gradient(-45deg,#396afc,#2948ff);">Login</button>
+        </form>
+    </div>
+</body>
+
+<script src="/js/index.js"></script>
+</html>

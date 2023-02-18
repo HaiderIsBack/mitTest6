@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- style css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Malaysian Institute Of Technology</title>
+</head>
+<script src="https://unpkg.com/scrollreveal"></script>
+<body>
+    <!-- Side Bar -->
+    <div class="sidebar" id="sideBar">
+        <div class="close-btn" onclick="sideBar()">
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="pl-0">
+            <li>
+                <a href="/"><i class="fa fa-home"></i> Home</a>
+            </li>
+            <li>
+                <a href="/about"><i class="fa fa-comments"></i> About</a>
+            </li>
+        </ul>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background: linear-gradient(45deg,#8E2DE2,#4A00E0);">
+        <div class="container">
+            <a href="/" class="navbar-brand"><img src="/Images/logo.png" style="width: 50px;" alt=""> <h3 class="d-none d-md-inline align-middle ">Malaysian Institute Of Technology</h3><h3 class="d-inline d-md-none align-middle">MIT</h3></a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item d-none d-md-block">
+                    <a href="/" class="nav-link first-link"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item d-none d-md-block">
+                    <a href="#" class="nav-link last-link"><i class="fa fa-comments"></i> About</a>
+                </li>
+                <li class="nav-item d-block d-md-none">
+                    <i class="fa fa-bars fa-2x text-light" onclick="sideBar()"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Profile -->
+    <div class="container">
+        <h1 class="text-center my-3">Personel Information</h1>
+    </div>
+
+    <div id="profile">
+        <div class="container">
+            <div class="image-border mx-auto"></div>
+            <img src="/Images/avatar.png" alt="profile image">
+            <br>
+            <h4 class="heading"><i class="fa fa-user"></i> Name </h4>
+            <h4 class="text-muted"><%= username%></h4>
+            <br>
+            <h4 class="heading"><i class="fa fa-envelope"></i> Email </h4>
+            <h4 class="text-muted"><%= email%></h4>
+            <br>
+            <h4 class="heading"><i class="fa fa-phone"></i> Phone </h4>
+            <h4 class="text-muted">0<%= phone%></h4>
+        </div>
+    </div>
+
+    <!-- Attendance -->
+    <div class="container">
+        <h1 class="text-center my-3">My Attendance</h1>
+    </div>
+
+    <div class="container text-center">
+        <table class="table table-striped table-hover table-responsive" style="border-radius: 30px;">
+            <thead style="background: linear-gradient(45deg,#8E2DE2,#4A00E0);color: #fff;">
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">P</td>
+                        <td>L</td>
+                        <td>P</td>
+                        <td>P</td>
+                        <td>P</td>
+                        <td>P</td>
+                        <td>P</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">P</td>
+                        <td>L</td>
+                        <td>P</td>
+                        <td>P</td>
+                        <td>P</td>
+                        <td>P</td>
+                        <td>P</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">P</td>
+                        <td>A</td>
+                        <td>P</td>
+                        <td>P</td>
+                        <td>P</td>
+                        <td>P</td>
+                        <td>P</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">P</td>
+                        <td>A</td>
+                        <td>P</td>
+                        <td>P</td>
+                        <td>P</td>
+                        <td>P</td>
+                        <td>P</td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+    
+</body>
+
+<script src="/js/index.js"></script>
+</html>

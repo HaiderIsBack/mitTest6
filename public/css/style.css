@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,400;0,600;0,700;0,800;0,900;1,100;1,600;1,800;1,900&display=swap');
+
+body{
+    background: #fff;
+    font-family:'Jost', sans-serif;
+    overflow-x: hidden !important;
+}
+
+.sidebar{
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    z-index: 100;
+    background: linear-gradient(-45deg,#fe8c00,#f83600);
+    transition: 0.4s ease-in;
+}
+
+.active{
+    left: 30%;
+}
+
+.sidebar ul{
+    list-style-type: none;
+}
+
+.sidebar ul li{
+    font-size: 25px;
+    padding: 30px 0px;
+    padding-left: 20px;
+    margin: auto;
+}
+
+.sidebar ul li:hover{
+    background-color: #fff;
+}
+
+.sidebar ul li:hover > a{
+    color: #f83600;
+}
+
+.sidebar ul li a{
+    color: #fff;
+}
+
+.close-btn{
+    position: relative;
+    height: 50px;
+}
+
+.close-btn div{
+    width: 5px;
+    height: 30px;
+    margin: 10px;
+    position: absolute;
+    top: 0%;
+    left: 80%;
+    background-color: #fff;
+}
+
+.close-btn div:nth-child(1){
+    transform: rotateZ(45deg);
+}
+
+.close-btn div:nth-child(2){
+    transform: rotateZ(-45deg);
+}
+
+#welcome-section button{
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.nav-link{
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    background-color: #fff;
+    color: #fe8c00 !important;
+}
+
+.first-link:hover{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.last-link:hover{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#profile{
+    position: relative;
+}
+
+#profile img{
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#profile .image-border{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: linear-gradient(#4A00E0,purple);
+    box-shadow: 0px 0px 30px rgba(0,0,0,0.5);
+    margin-top: 15px;
+    animation: profile-img 1s infinite ;
+}
+
+.heading{
+    border-left: #4A00E0 10px solid;
+    padding-left: 20px;
+    transition: 0.3s ease-out;
+}
+
+.heading:hover{
+    border-left: #4A00E0 15px solid;
+    font-size: 30px;
+}
+@keyframes profile-img {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
